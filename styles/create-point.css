@@ -102,3 +102,42 @@ form button{
 form button:hover{
     background-color: #2fb86e;
 }
+
+.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 32px 24px 16px;
+    height: 180px;
+    list-style: none;
+    cursor: pointer;
+    border: 2px solid #f0f0f5;
+    border-radius: 8px;
+    background-color: #f0f0f5;
+}
+
+.items-grid li span{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--title-color);
+}
+
+.items-grid li.selected{
+    border: 2px solid #34cb29;
+    background-color: #e1faec;
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
+}
